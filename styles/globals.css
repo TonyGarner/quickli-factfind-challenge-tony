@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --quickli-primary: #0F172A;
+  --quickli-accent: #0284C7;
+  --quickli-success: #059669;
+  --quickli-light: #F1F5F9;
+  --quickli-border: #E2E8F0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Professional form & card styles for Quickli feel */
+.card {
+  @apply bg-white border border-quickli-border rounded-xl shadow-sm;
+}
+
+.section-card {
+  @apply card p-6 mb-6;
+}
+
+.input {
+  @apply w-full px-4 py-2.5 border border-quickli-border rounded-lg 
+         focus:outline-none focus:ring-2 focus:ring-quickli-accent/20 focus:border-quickli-accent
+         transition-all text-sm placeholder:text-quickli-muted;
+}
+
+.input:focus {
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+}
+
+.label {
+  @apply block text-sm font-medium text-quickli-primary mb-1.5;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg font-medium text-sm
+         transition-all active:scale-[0.985] disabled:opacity-60 disabled:pointer-events-none;
+}
+
+.btn-primary {
+  @apply bg-quickli-primary text-white hover:bg-[#1E293B];
+}
+
+.btn-accent {
+  @apply bg-quickli-accent text-white hover:bg-[#0369A1];
+}
+
+.btn-secondary {
+  @apply bg-white text-quickli-primary border border-quickli-border hover:bg-quickli-light;
+}
+
+.btn-success {
+  @apply bg-quickli-success text-white hover:bg-[#047857];
+}
+
+.modal {
+  @apply fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4;
+}
+
+.modal-content {
+  @apply card w-full max-w-lg max-h-[90vh] overflow-auto;
+  max-width: 900px;
+}
+
+/* Progress bar */
+.progress {
+  @apply h-1.5 bg-quickli-light rounded-full overflow-hidden;
+}
+
+.progress-bar {
+  @apply h-full bg-quickli-accent transition-all duration-300;
+}
+
+/* Nice submission detail view */
+.answer-row {
+  @apply flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4 py-3 border-b border-quickli-border last:border-0;
+}
+
+.answer-label {
+  @apply text-sm font-medium text-quickli-muted w-full sm:w-48 flex-shrink-0;
+}
+
+.answer-value {
+  @apply text-sm text-quickli-primary font-medium break-words;
+}
+
+/* Toast positioning for sonner */
+Toaster {
+  --normal-bg: #0F172A;
+  --normal-text: white;
+}
