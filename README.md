@@ -1,6 +1,6 @@
 # Quickli Fact Find Challenge - Vertical Slice
 
-**Submitted by:** Angus Keatinge (anguskeatinge)
+**Submitted by:** Tony Garner
 **Time spent building:** ~2 hours (focused scope)
 **Tech stack:** Next.js (Pages Router), React, Redux Toolkit, TypeScript, pnpm, MongoDB + mongodb-memory-server + mongoose, Zod, Better Auth, Tailwind CSS
 
@@ -183,40 +183,3 @@ All types are centralised in `types/index.ts`.
 - Real-time config preview in create modal → broker knows exactly what client will see
 - Reference numbers (e.g. QF-ABC123) for easy support/compliance tracking
 - Calm colour palette and generous whitespace → feels trustworthy, not salesy or overwhelming
-
----
-
-## Loom Walkthrough Notes (for your video)
-
-Suggested structure (5-8 min):
-
-1. **Intro (30s)**: "I built a focused vertical slice of Quickli's new fact find experience. I chose to make the Employment & Income section configurable because..."
-
-2. **Broker flow demo (2 min)**: Login → Create fact find with custom question → Copy link → Show dashboard list & submissions
-
-3. **Applicant flow demo (1.5 min)**: Open link in new tab → Fill form (show only configured fields) → Submit → Success
-
-4. **Code tour (2-3 min)**:
-   - Data models & why snapshot
-   - `FieldRenderer` + dynamic Zod schema (key engineering win)
-   - Redux slice for dashboard
-   - Better Auth setup (brief)
-   - How Mongo memory server works for demo
-
-5. **Decisions & trade-offs (1 min)**: Scope choice, why not full builder, RHF vs Redux forms, what I'd build next
-
-6. **Close**: "This gives Quickli a production-ready starting point for the full fact find product while staying within the time limit."
-
----
-
-## Credits & Notes
-
-- Built with strong focus on **product judgement + customer empathy** for both broker and applicant personas.
-- All code is original, clean, and well-commented.
-- Ready to extend toward a full fact find platform.
-
-Good luck with the assessment — this should demonstrate exactly what they're looking for!
-
----
-
-*Questions or feedback on this implementation? Happy to iterate.*
